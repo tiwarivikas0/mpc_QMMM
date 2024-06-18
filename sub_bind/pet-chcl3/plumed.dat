@@ -1,0 +1,16 @@
+c1: CENTER ATOMS=1-8
+c2: CENTER ATOMS=22-46
+
+d: DISTANCE ATOMS=c1,c2
+
+# stop simulation as soon as the substrate leaves the active binding site
+COMMITTOR ...
+  ARG=d
+  STRIDE=100
+  BASIN_LL1=1.5
+  BASIN_UL1=3.0
+  FILE=commit.log FMT=%8.4f
+... COMMITTOR
+
+PRINT ARG=* FILE=COLVAR STRIDE=500
+
