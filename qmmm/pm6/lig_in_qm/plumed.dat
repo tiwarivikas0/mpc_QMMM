@@ -1,4 +1,5 @@
 #RESTART
+LOAD FILE=../../../PathCV.so
 UNITS LENGTH=A ENERGY=kj/mol TIME=fs
 FLUSH STRIDE=1
 
